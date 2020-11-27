@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Cadastros - Empréstimos</title>
+  <link rel="stylesheet" href="/static/styles/cadastros.css" />
+  <link rel="stylesheet" href="/static/styles/links.css" />
+  <link rel="stylesheet" href="/static/styles/main.css" />
+</head>
+
+<body>
+    <div class="container-main">  
+        {% include "links.html" %}
+        <div class="main-body">
+            <div class="main-body-title">CADASTROS</div>
+            <div class="main-body-content">
+                <div class="container-cadastros">
+                {% if users_length == 0 %}
+                    <div>Nenhum email cadastrado.</div>
+                {% else %}
+                    <div class="user-list">
+                        {% for user in users %}
+                        <div class="user-list-entry">
+                            <div>
+                                <span>Nome:</span>
+                                <span>{{ user.name }}</span>
+                            </div>
+                            <div>
+                                <span>CPF:</span>
+                                <span>{{ user.cpf }}</span>
+                            </div>
+                            <div>
+                                <span>E-mail:</span>
+                                <span>{{ user.email }}</span>
+                            </div>
+                            <div>
+                                <span>Empréstimo:</span>
+                                <span>{{ user.loan }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

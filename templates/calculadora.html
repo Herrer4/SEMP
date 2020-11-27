@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Calculadora - Empréstimos</title>
+  <link rel="stylesheet" href="/static/styles/calculadora.css" />
+  <link rel="stylesheet" href="/static/styles/links.css" />
+  <link rel="stylesheet" href="/static/styles/main.css" />
+</head>
+
+<body>
+    <div class="container-main">
+        {% include "links.html" %}
+        <div class="main-body">
+            <div class="main-body-title">CALCULADORA</div>
+            <div class="main-body-content">
+                <div class="container-calculadora">
+                    <div>
+                        Bem-vindo ao simulador de empréstimo! Por favor, informe seu salário e em quantas parcelas
+                        você planeja pagar o empréstimo para fazer a simulação!
+                    </div>
+                    <div class="calculadora-inputs">
+                        <div>
+                            <span>Empréstimo (R$):</span>
+                            <input type="text" id="input-loan-value" />
+                        </div>
+                        <div>
+                            <span>Salário (R$):</span>
+                            <input type="text" id="input-monthly-income" />
+                        </div>
+                        <div>
+                            <span>Parcelas:</span>
+                            <select id="input-loan-installments"></select>
+                        </div>
+                    </div>
+                    <button id="button-simulate-loan">CALCULAR EMPRÉSTIMO</button>
+                    <div id="output-loan-simulation"></div>
+                    <div id="form-user-data">
+                        <div>
+                        Existe a possibilidade do seu empréstimo ser aprovado! Deixe as suas informações a seguir para
+                        receber avisos de oportunidades para receber um empréstimo!
+                        </div>
+                        <div class="calculadora-inputs">
+                            <div>
+                                <span>Nome:</span>
+                                <input type="text" id="input-name" />
+                            </div>
+                            <div>
+                                <span>CPF:</span>
+                                <input type="text" id="input-cpf" />
+                            </div>
+                                <div>
+                                <span>Email:</span>
+                                <input type="text" id="input-email" />
+                            </div>
+                        </div>
+                        <button id="button-send-data">ENVIAR DADOS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="/static/dist/main.js"></script>
+</body>
+
+</html>

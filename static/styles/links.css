@@ -1,0 +1,18 @@
+.website-links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+    background: white;
+    border: 1px solid black;
+}
+
+.website-links > a {
+    color: darkcyan;
+    font: 24px 'Roboto', sans-serif;
+    text-decoration: none;
+}
